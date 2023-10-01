@@ -1,0 +1,36 @@
+.navbar {
+    background-color: #f8f8f8;
+    padding: 10px 30px;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.pagination-button {
+    color: #5e5e5e;
+}
+
+.pagination-button:hover {
+    color:#007bff
+}
+
+.post img {
+    width: 100%;
+}
+
+.post2 {
+    width: 600px;
+    height: auto;
+    border-radius: 1%;
+    margin: auto;
+}
+
+.contenido img {
+    width: 100%;
+}
+
+.active-button i {
+    color: #007bff !important;
+}
+

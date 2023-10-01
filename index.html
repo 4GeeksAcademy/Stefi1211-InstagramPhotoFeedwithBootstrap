@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Instagram page with bootstrap</title>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="/img/instagram.png" alt="Instagram" width="30" height="30" class="d-inline-block align-top">
+            Instagram
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPostModal">Create a new post</button>
+                </li>
+                <li class="nav-item dropdown">
+                    <button class="btn btn-secondary dropdown-toggle ms-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                        <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+<!-- paginacion -->
+<div class="container text-center mt-2 mb-2">
+    <button type="button" class="pagination-button btn btn-outline-light active-button" onclick="showPage1()"><i class="fas fa-th"></i></button>
+    <button type="button" class="pagination-button btn btn-outline-light" onclick="showPage2()"><i class="fa-solid fa-square"></i></button>
+</div>
+
+    <!-- Página 1 -->
+<div class="container post-container">
+    <div class="row">
+        <div class="col-md-4 p-2">
+            <div class="post">
+                <img src="https://picsum.photos/id/18/800" alt="post1">
+            </div>
+        </div>
+        <div class="col-md-4 p-2">
+            <div class="post">
+                <img src="https://picsum.photos/id/50/800" alt="post2">
+            </div>
+        </div>
+        <div class="col-md-4 p-2">
+            <div class="post">
+                <img src="https://picsum.photos/id/47/800" alt="post3">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 p-2">
+            <div class="post">
+                <img src="https://picsum.photos/id/80/800" alt="post4">
+            </div>
+        </div>
+        <div class="col-md-4 p-2">
+            <div class="post">
+                <img src="https://picsum.photos/id/57/800" alt="post5">
+            </div>
+        </div>
+        <div class="col-md-4 p-2">
+            <div class="post">
+                <img src="https://picsum.photos/id/100/800" alt="post6">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 p-2">
+            <div class="post">
+                <img src="https://picsum.photos/id/67/800" alt="post7">
+            </div>
+        </div>
+        <div class="col-md-4 p-2">
+            <div class="post">
+                <img src="https://picsum.photos/id/60/800" alt="post8">
+            </div>
+        </div>
+        <div class="col-md-4 p-2">
+            <div class="post">
+                <img src="https://picsum.photos/id/70/800" alt="post9">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Página 2 (oculta inicialmente) -->
+<div class="container page2-container" style="display: none;">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="post2 border border-secondary border-opacity-25 mb-4"> 
+                <div class="d-flex justify-content-between p-2">
+                    <h5 class="">My first photo</h5>
+                    <h6>01/10</h6>
+                </div>
+                <div class="contenido">
+                    <img src="https://picsum.photos/id/18/800" alt="post1">
+                </div>
+                <div class="descripcion p-2">
+                    <p class="fw-bold mb-1">212 Likes</p>
+                    <p class="mb-1">This is my first photo on the Instagram page that I just created with bootstrap, I'm very happy.</p>
+                </div>
+            </div> 
+        </div>
+    </div> <!--cierra primer post-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="post2 border border-secondary border-opacity-25 mb-4"> 
+                <div class="d-flex justify-content-between p-2">
+                    <h5 class="">My second photo</h5>
+                    <h6>05/10</h6>
+                </div>
+                <div class="contenido">
+                    <img src="https://picsum.photos/id/50/800" alt="post2">
+                </div>
+                <div class="descripcion p-2">
+                    <p class="fw-bold mb-1">135 Likes</p>
+                    <p class="mb-1">This is my second photo on the Instagram page that I just created with bootstrap, I'm very happy.</p>
+                </div>
+            </div> 
+        </div> 
+    </div> <!--cierra segundo post-->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="post2 border border-secondary border-opacity-25 mb-4"> 
+                <div class="d-flex justify-content-between p-2">
+                    <h5 class="">My third photo</h5>
+                    <h6>12/10</h6>
+                </div>
+                <div class="contenido">
+                    <img src="https://picsum.photos/id/47/800" alt="post3">
+                </div>
+                <div class="descripcion p-2">
+                    <p class="fw-bold mb-1">256 Likes</p>
+                    <p class="mb-1">This is my third photo on the Instagram page that I just created with bootstrap, I'm very happy.</p>
+                </div>
+            </div> 
+        </div>
+    </div> <!--cierra tercer post-->
+</div>
+
+<!-- modal -->
+    <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="caption" class="form-label fw-semibold">Caption:</label>
+                            <textarea class="form-control" id="caption" placeholder="Add the caption of your post here" rows="2"></textarea>
+                        </div>
+                        <div class="d-flex">
+                            <button type="button" class="btn btn-light border"><i class="fas fa-camera"></i></button>
+                            <button type="button" class="btn btn-light border ms-1"><i class="fas fa-map-marker-alt"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Scripts de Bootstrap y FontAwesome -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/d383aa152a.js" crossorigin="anonymous"></script>
+
+<script>
+    function showPage1() {
+        document.querySelector('.post-container').style.display = 'block';
+        document.querySelector('.page2-container').style.display = 'none';
+
+        document.querySelector('.pagination-button:nth-child(1)').classList.add('active-button');
+        document.querySelector('.pagination-button:nth-child(2)').classList.remove('active-button');
+    }
+
+    function showPage2() {
+        document.querySelector('.post-container').style.display = 'none';
+        document.querySelector('.page2-container').style.display = 'block';
+
+        document.querySelector('.pagination-button:nth-child(1)').classList.remove('active-button');
+        document.querySelector('.pagination-button:nth-child(2)').classList.add('active-button');
+    }
+</script>
+
+</body>
+</html>
